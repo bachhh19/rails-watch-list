@@ -1,2 +1,65 @@
 // Import page-specific CSS files here.
 @import "home";
+// pages/_index.scss
+
+h1 {
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-md-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card {
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+  }
+
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+  }
+
+  .card-body {
+    padding: 1rem 1.25rem;
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $primary-color;
+    }
+
+    .btn {
+      margin-top: 0.5rem;
+      width: 100%;
+      border-radius: 0.4rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    .card-img-top {
+      height: 180px;
+    }
+  }
+}

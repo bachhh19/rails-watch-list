@@ -1,0 +1,18 @@
+<h2>Bookmarked Movies:</h2>
+<% if @bookmarks.any? %>
+  <ul>
+    <% @bookmarks.each do |bookmark| %>
+      <li>
+        <strong><%= bookmark.movie.title %></strong><br>
+        <em><%= bookmark.comment %></em><br>
+        <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No movies in this list yet.</p>
+<% end %>
+<%= link_to "Retour", list_path(@list), class: "btn btn-secondary mb-3" %>
+
+
+<%= link_to "Add a bookmark", new_list_bookmark_path(@list) %>

@@ -1,0 +1,7 @@
+<h1>Create a New List</h1>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, label: "Name of your list" %>
+  <%= f.input :image_url, label: "Image URL for your list (optional)" %>
+  <%= f.button :submit, "Create List", class: "btn btn-primary" %>
+<% end %>

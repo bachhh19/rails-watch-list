@@ -19,6 +19,8 @@ gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
+gem 'ostruct'
+
 
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
